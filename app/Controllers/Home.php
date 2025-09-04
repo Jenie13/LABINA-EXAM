@@ -6,10 +6,16 @@ class Home extends BaseController
 {
     public function index()
     {
-        // Create your content as a string
-        $content = "<h1>Welcome to the Home Page!</h1><p>This content is created directly in the controller.</p>";
+        return view('index');
+    }
 
-        // Pass the content string to the template
-        return view('template', ['content' => $content]);
+    public function about()
+    {
+        return view('about');
+    }
+
+    public function contact()
+    {
+        return view('contact');
     }
 }
