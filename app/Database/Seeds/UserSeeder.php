@@ -8,6 +8,8 @@ class UserSeeder extends Seeder
 {
     public function run()
     {
+        $this->db->table('users')->emptyTable();
+
         $data = [
             [
                 'name'     => 'Bina',
@@ -29,7 +31,6 @@ class UserSeeder extends Seeder
             ],
         ];
 
-        // Insert multiple users
         $this->db->table('users')->insertBatch($data);
     }
 }
