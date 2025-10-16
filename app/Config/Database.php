@@ -27,9 +27,9 @@ class Database extends Config
     public array $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'labina_exam',
+        'username'     => 'root',
         'password'     => '',
-        'database'     => '',
+        'database'     => 'labina_exam',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,

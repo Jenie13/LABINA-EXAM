@@ -65,6 +65,11 @@ class Auth extends BaseController
                     ];
                     session()->set($sessionData);
 
+                    // Debug: Check if session is set
+                    if (!session()->get('isLoggedIn')) {
+                        die('Session not set! Check writable/session permissions and browser cookies.');
+                    }
+
                     // Role-based redirection
                     switch ($user['role']) {
                         case 'admin':

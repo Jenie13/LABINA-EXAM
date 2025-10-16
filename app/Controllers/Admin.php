@@ -6,6 +6,11 @@ class Admin extends BaseController
 {
     public function dashboard()
     {
+        // Debug: Print session data
+        echo '<pre>';
+        print_r(session()->get());
+        echo '</pre>';
+
         // Check if user is logged in
         if (!session()->get('isLoggedIn')) {
             return redirect()->to('/login');
